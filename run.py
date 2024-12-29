@@ -11,7 +11,7 @@ def play(string):
   if not string:
     return
   if len(sys.argv) > 1:
-    audio = tts.tts_with_vc(text=string, speaker_wav=sys.argv[1], language="en")
+    audio = tts.tts(text=string, speaker_wav=sys.argv[1], language="en")
   else:
     audio = tts.tts(text=string, speaker="Daisy Studious", language="en")
   sd.play(audio, samplerate=22050)
